@@ -1,6 +1,12 @@
 # hw07-JasmineLib
 hw07-JasmineLib created by GitHub Classroom
 
+
+#Jasmine's Homework 7 Repository
+
+Note: Initial contents of this R package were forked from Vincenzo Coia's repo: 
+
+
 hw07 Tasks
 ----------------------------------------------------
 
@@ -14,6 +20,8 @@ Give function arguments sensible defaults, where relevant.    |  root() has the 
 Your package should pass check() without errors (warnings and notes are OK).  |  This passed for me! |   
 Update the README and vignette to show usage of all the functions in the package.           | vignette updated  |   
 Modify the instructions telling someone how to install your package.       |      See below for instructions on how to install package         |           
+Graphs |    try to incorporate a graph using the function root( )     |
+
  
 
  
