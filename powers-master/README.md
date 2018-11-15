@@ -101,9 +101,9 @@ ggplot(test_dataframe) +
 ``` r
 
 #You can also use powers functions to manipulate your data, for example to make a graph
+#use the root and cube function with piping.
 ggplot(test_dataframe) +
     geom_line() +
-    #use the root and cube function with piping. default for the root function is square root.
     aes(x = root(Squares), y = cube(Regular)) +  
     ggtitle("Cubes vs. square root of Squares") + 
     theme_bw()
