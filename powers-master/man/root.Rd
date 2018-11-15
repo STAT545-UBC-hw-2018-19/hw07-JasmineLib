@@ -26,7 +26,7 @@ The Root function will take the root (square, cube, etc, as specified) of a nume
 }
 \details{
 This function was developped as part of homework for STAT547 class. hopefully it is of some use to you!
-For more details see vignette
+For more details see vignette named powers-vignette
 }
 \examples{
 root(27,3)

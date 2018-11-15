@@ -20,5 +20,5 @@
 #'@rdname root
 #'@export
 #'@details This function was developped as part of homework for STAT547 class. hopefully it is of some use to you!
-#'For more details see vignette
+#'For more details see vignette named powers-vignette
 root <- function(x, y = 2, plot_it = FALSE) pow(x, a=1/y, plot_it=plot_it)
