@@ -15,30 +15,91 @@ knitr::opts_chunk$set(
 [![Build Status](https://travis-ci.org/vincenzocoia/powers.svg?branch=master)](https://travis-ci.org/vincenzocoia/powers)
 
 __Note__: This R package is not mean to be "serious". It's just for teaching purposes. 
+This file has been adapted from Vincenzo Coia's README file for the Powers Package. 
 
 # powers
 
 This is an R package that gives `sqrt()` friends by providing other power functions.
 
+
 ## Installation
 
 You can install powers from github with:
 
+First install the devtools package:
 ```{r gh-installation, eval = FALSE}
 # install.packages("devtools")
-devtools::install_github("vincenzocoia/powers")
+```
+Then, clone and download the powers-master documents from my github repository: [link here](https://github.com/STAT545-UBC-students/hw07-JasmineLib/tree/master)
+
+# Functions included:
+The functions included in the powers package are:  
+- root()  
+- square()  
+- cube()  
+- reciprocal()  
+
+# Details on the Root() function:   
+- this is the function made for this hw07 assignment  
+- accepted inputs must be of class numeric (ie an integer, numeric vector, etc)  
+- arguments are accepted in the form (x,y), where x is the entry you want the root of, and y is the specific root you want to take (see examples below).  
+- if y is not specified, it will default to y = 2, to take the square root.
+
+
+## Examples
+
+You can see the vignette for more extensive use, but here's a few examples:
+
+will take the square root of 4:
+```{r example1}
+powers::root(4,2)
 ```
 
-## Example
+will also take square root of 4: 
+```{r example2}
+powers::root(4)
+```
 
-See the vignette for more extensive use, but here's an example:
+will take the cube root:
+```{r example3}
+powers::root(27,3)
+```
 
-```{r example}
-powers::reciprocal(2)
+will take the square root of a numeric vector:
+```{r example4}
+powers::root(c(0.01,1,4,9))
+```
+
+logicals will coerce to numeric, and the ^1/5 root will be obtained
+```{r example5}
+powers::root(c(TRUE, FALSE, TRUE), 5)
+```
+
+# Another Example Using a Graph: 
+```{r graph example}
+library(ggplot2)
+library(powers)
+test_dataframe = data.frame("Cubes" = c(1,8,27,64,125,216),"Squares" = c(1,4,9,16,25,36), "Regular" = c(1,2,3,4,5,6))
+
+
+#Graph without any powers functions:
+ggplot(test_dataframe) +
+    geom_line() +
+    aes(x = Squares, y =Cubes) + 
+    ggtitle("Cube Values vs. Square Values") + 
+    theme_bw()
+
+#You can also use powers functions to manipulate your data, for example to make a graph
+ggplot(test_dataframe) +
+    geom_line() +
+    #use the root and cube function with piping. default for the root function is square root.
+    aes(x = root(Squares), y = cube(Regular)) +  
+    ggtitle("Cubes vs. square root of Squares") + 
+    theme_bw()
+
+
 ```
 
 ## For Developers
 
-(Again, I don't actually intend for anyone to develop this silly package, but if I did, here's what I'd write.)
-
-Use the internal `pow` function as the machinery for the front-end functions such as `square`, `cube`, and `reciprocal`. 
+Use the internal `pow` function as the machinery for front-end functions such as `square`, `cube`, and `reciprocal`, and `root`. 
