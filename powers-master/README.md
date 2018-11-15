@@ -85,22 +85,11 @@ Another Example Using a Graph:
 ``` r
 library(ggplot2)
 library(powers)
-test_dataframe = data.frame("Cubes" = c(1,8,27,64,125,216),"Squares" = c(1,4,9,16,25,36), "Regular" = c(1,2,3,4,5,6))
+test_dataframe = data.frame("Cubes" = c(1,8,27,64,125,216),
+                            "Squares" = c(1,4,9,16,25,36), 
+                            "Regular" = c(1,2,3,4,5,6)
+                            )
 
-
-#Graph without any powers functions:
-ggplot(test_dataframe) +
-    geom_line() +
-    aes(x = Squares, y =Cubes) + 
-    ggtitle("Cube Values vs. Square Values") + 
-    theme_bw()
-```
-
-![](README-graph%20example-1.png)
-
-``` r
-
-#You can also use powers functions to manipulate your data, for example to make a graph
 #use the root and cube function with piping.
 ggplot(test_dataframe) +
     geom_line() +
@@ -109,7 +98,7 @@ ggplot(test_dataframe) +
     theme_bw()
 ```
 
-![](README-graph%20example-2.png)
+![](README-graph%20example-1.png)
 
 For Developers
 --------------
