@@ -9,8 +9,8 @@ Note: Initial contents of this R package were forked from [Vincenzo Coia's repo]
 
 # Links:
 
-To view the README for the package, click [here](https://github.com/STAT545-UBC-students/hw07-JasmineLib/blob/master/powers-master/README.md). 
-To view the package folder contents, click [here](https://github.com/STAT545-UBC-students/hw07-JasmineLib/tree/master/powers-master)
+To view the README for the package, click [here](https://github.com/STAT545-UBC-students/hw07-JasmineLib/blob/master/powers-master/README.md).   
+To view the package (named powers) folder contents, click [here](https://github.com/STAT545-UBC-students/hw07-JasmineLib/tree/master/powers-master)
 
 hw07 Tasks
 ----------------------------------------------------
