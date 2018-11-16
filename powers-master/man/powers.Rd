@@ -6,14 +6,17 @@
 \alias{powers-package}
 \title{Convenient Computation of Powers}
 \description{
-Are you tired of using the power operator, \code{^} or \code{**} in R?
-Use this package to call functions that apply common powers
+Are you tired of using the power operator, \code{^} or \code{**} in R? Do you want an easy way to take roots or reciprocals?
+This package will call functions that apply common powers or roots
 to your vectors.
 }
 \note{
 This package isn't actually meant to be serious. It's just for
 teaching purposes.
+This package was adapted by JasminLib for hw07 of Stat547.
 }
 \author{
 Vincenzo Coia
+
+Jasmine Lib
 }

@@ -10,7 +10,7 @@ powers
 This is an R package that gives `sqrt()` friends by providing other power functions.
 
 Installation
-------------
+============
 
 You can install powers from github with:
 
@@ -40,7 +40,7 @@ Details on the Root() function:
 -   if y is not specified, it will default to y = 2, to take the square root.
 
 Examples
---------
+========
 
 You can see the vignette for more extensive use, but here's a few examples:
 
@@ -101,6 +101,6 @@ ggplot(test_dataframe) +
 ![](README-graph%20example-1.png)
 
 For Developers
---------------
+==============
 
 Use the internal `pow` function as the machinery for front-end functions such as `square`, `cube`, and `reciprocal`, and `root`.
